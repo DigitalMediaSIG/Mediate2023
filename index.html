@@ -252,18 +252,42 @@
   </section>
 
 
-  <section id="schedule">
+ <section id="schedule">
     <div class="container">
       <div class="row">
         <div class="col-lg-8 mx-auto">
           <h2>Schedule</h2>
           <!-- <h3 class="mb-5">Coming Soon!</h3> -->
-          Date: <em class="font-weight-bold" id="confTime"></em>
-		<p class="lead">Coming Soon!</p>
+          Date & Time: <em class="font-weight-bold" id="confTime"></em>
+            <ul>
+              <li class="nobul">5 min <b>Intro</b></li>
+              <li class="nobul"><u id="GuillaumeTime"></u> <b>Guillaume Bouchard.</b> <em>Invited Speaker Session.</em></li>
+              <li class="nobul"><u id="contributed1Time"></u> <b><em>Contributed Session 1 (10/6 min presentation for long/short papers + 3 min Q&A)</em></b></li>
+              <ul>
+		  <li class="nobul"><b>Wenjia Zhang, Lin Gui, Rob Procter and Yulan He.</b> <em>NewsQuote: A Dataset Built on Quote Extraction and Attribution for Expert Recommendation in Fact-Checking.</em></li>
+                  <li class="nobul"><b>Farhan Ahmad Jafri, Mohammad Aman Siddiqui, Surendrabikram Thapa, Kritesh Rauniyar, Usman Naseem and Imran Razzak.</b> <em>Uncovering Political Hate Speech During Indian Election Campaign: A New Low-Resource Dataset and Baselines.</em></li>
+                  <li class="nobul"><b>Lin Ai, Zizhou Liu and Julia Hirschberg.</b> <em>Combating the COVID-19 Infodemic: Untrustworthy Tweet Classification using Heterogeneous Graph Transformer.</em> </li>
+                  <li class="nobul"><b>Jinsheng Pan, Weihong Qi, Zichen Wang and Hanjia Lyu, Jiebo Luo.</b> <em>Bias or Diversity? Unraveling Fine-Grained Thematic Discrepancy in U.S. News Headlines.</em> </li>      
+              </ul>
+             <li class="nobul"><u id="contributed2Time"></u> <b><em>Contributed Session 2 (10 min talk + 5 min Q&A)</em></b></li>
+              <ul>
+		  <li class="nobul"><b>Martin Wessel and Timo Spinde.</b> <em> Trends in Automatic Media Bias Detection .</em></li>
+              </ul>
+              <li class="nobul">30 min <b>Coffee break</b></li>
+              <li class="nobul"><u id="JieboTime"></u> <b>Jiebo Luo.</b> <em>Invited Speaker Session.</em></li>
+              <li class="nobul"><u id="contributed3Time"></u> <b><em>Contributed Session 3 (10/6 min presentation for long/short papers + 3 min Q&A)</em></b></li>
+              <ul>
+                  <li class="nobul"><b>Tommaso Fornaciari, Luca Luceri, Emilio Ferrara and Dirk Hovy.</b> <em>Leveraging Social Interactions to Detect Misinformation on Social Media.</em> </li>
+                  <li class="nobul"><b>Enes Altuncu, Jason R.C. Nurse, Meryem Bagriacik, Sophie Kaleba, Haiyue Yuan, Lisa Bonheme and Shujun Li.</b> <em>aedFaCT: Scientific Fact-Checking Made Easier via Semi-Automatic Discovery of Relevant Expert Opinions.</em> </li>
+                  <li class="nobul"><b>Rob Procter, Miguel Arana Catania, Yulan He, Maria Liakata, Arkaitz Zubiaga, Elena Kochkina and Runcong Zhao.</b> <em>Some Observations on Fact-Checking Work with Implications for Computational Support.</em> </li>
+              </ul>
+              <li class="nobul"><u id="TanuTime"></u> <b>Tanu Mitra.</b> <em>Invited Speaker Session.</em></li>
+            </ul>
         </div>
       </div>
     </div>
   </section>
+
 
   <section id="callforpapers" class="bg-light">
     <div class="container">
@@ -478,16 +502,18 @@
     const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     var date = new Date('06/05/2022');
     document.getElementById("confTime").innerHTML = months[date.getMonth()].concat(', ', date.getDate());
-    var date = new Date('06/06/2022 08:40:00 AM EDT');
-    document.getElementById("philipTime").innerHTML = ''.concat((date.getHours()<10?'0':''), date.getHours(), ':', (date.getMinutes()<10?'0':''), date.getMinutes());
-    var date = new Date('06/06/2022 09:10:00 AM EDT');
+    var date = new Date('06/05/2022 07:05:00 AM EDT');
+    document.getElementById("GuillaumeTime").innerHTML = ''.concat((date.getHours()<10?'0':''), date.getHours(), ':', (date.getMinutes()<10?'0':''), date.getMinutes());
+    var date = new Date('06/05/2022 07:30:00 AM EDT');
     document.getElementById("contributed1Time").innerHTML = ''.concat((date.getHours()<10?'0':''), date.getHours(), ':', (date.getMinutes()<10?'0':''), date.getMinutes());
-    var date = new Date('06/06/2022 11:00:00 AM EDT');
-    document.getElementById("heidiTime").innerHTML = ''.concat((date.getHours()<10?'0':''), date.getHours(), ':', (date.getMinutes()<10?'0':''), date.getMinutes());
-    var date = new Date('06/06/2022 11:30:00 AM EDT');
+    var date = new Date('06/05/2022 08:20:00 AM EDT');
     document.getElementById("contributed2Time").innerHTML = ''.concat((date.getHours()<10?'0':''), date.getHours(), ':', (date.getMinutes()<10?'0':''), date.getMinutes());
-    var date = new Date('06/06/2022 12:30:00 PM EDT');
-    document.getElementById("ethanTime").innerHTML = ''.concat((date.getHours()<10?'0':''), date.getHours(), ':', (date.getMinutes()<10?'0':''), date.getMinutes());
+    var date = new Date('06/05/2022 8:35:00 AM EDT');
+    document.getElementById("JieboTime").innerHTML = ''.concat((date.getHours()<10?'0':''), date.getHours(), ':', (date.getMinutes()<10?'0':''), date.getMinutes());
+    var date = new Date('06/05/2022 9:30:00 AM EDT');
+    document.getElementById("contributed3Time").innerHTML = ''.concat((date.getHours()<10?'0':''), date.getHours(), ':', (date.getMinutes()<10?'0':''), date.getMinutes());
+    var date = new Date('06/05/2022 10:05:00 PM EDT');
+    document.getElementById("TanuTime").innerHTML = ''.concat((date.getHours()<10?'0':''), date.getHours(), ':', (date.getMinutes()<10?'0':''), date.getMinutes());
   </script>
 </body>
 
